@@ -18,7 +18,16 @@ git add .
 git commit -m "commit"
 git push origin
 ```
-### 2. 分支操作
+### 2. git打Tag操作
+```
+git tag -a 2.0.4 -m '创建TAG'
+git push origin 2.0.4                   //将2.0.4标签提交到git服务器
+git push origin --tag                   //提交所有tag至服务器
+git tag -d 2.1.0                        //删除本地标签
+git push origin :refs/tags/2.1.0        //删除远程标签
+git push origin --delete tag <tagname>  //删除远程标签
+```
+### 3. 分支操作
 1. 显示所有分支
 ```
 git branch
@@ -34,9 +43,16 @@ git merge develop
 ```
 4. 使用Git下载指定分支命令为
 ```
-git clone -b git@git.XXX.XXX.git
+git clone -b special branch name git@git.XXX.XXX.git
 ```
-### 3. git回滚操作
+
+### 4. git更换.gitignore文件
+```
+git rm -r --cached .                //将仓库中的index递归删除  
+git add .                           //重新添加仓库索引
+git commit -m 'update git.ignore'   //提交
+``` 
+### 5. git回滚操作
 1. 方式一
 ```
 git fetch --all
@@ -44,19 +60,3 @@ git reset --hard origin/develop
 ```
 2. 方式二
 [https://www.cnblogs.com/wancy86/p/5848024.html](https://www.cnblogs.com/wancy86/p/5848024.html)
-
-### 4. git打Tag操作
-```
-git tag -a 2.0.4 -m '创建TAG'
-git push origin 2.0.4                   //将2.0.4标签提交到git服务器
-git push origin --tag                   //提交所有tag至服务器
-git tag -d 2.1.0                        //删除本地标签
-git push origin :refs/tags/2.1.0        //删除远程标签
-git push origin --delete tag <tagname>  //删除远程标签
-```
-### 5. git更换.gitignore文件
-```
-git rm -r --cached .                //将仓库中的index递归删除  
-git add .                           //重新添加仓库索引
-git commit -m 'update git.ignore'   //提交
-``` 
