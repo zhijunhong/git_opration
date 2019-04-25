@@ -1,6 +1,6 @@
 ![Git](https://git-scm.com/images/logo@2x.png)
 
-## Git命令和常用操作
+## Git常用命令和操作
 ### 1. 上传项目
 1. 初始上传项目
 ```
