@@ -4,7 +4,7 @@
 ### 1. 上传项目
 1. 初始上传项目
 ```
-*git init*
+git init
 git remote add origin git@git.XXX.XXX.git
 git add .
 git commit -m "Initial commit"
