@@ -60,3 +60,9 @@ git reset --hard origin/develop
 ```
 2. 方式二
 [https://www.cnblogs.com/wancy86/p/5848024.html](https://www.cnblogs.com/wancy86/p/5848024.html)
+
+### 6. git branch --set-upstream 本地关联远程分支
+```
+git branch --set-upstream-to=origin/<branch> <branch>
+本地关联远程分支，其中origin/<branch>是你本地分支对应的远程分支；<branch>是你当前的本地分支
+``` 
