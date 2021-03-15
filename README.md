@@ -41,9 +41,9 @@ git checkout master
 先将当前分支切换成master分支
 git merge develop
 ```
-4. 使用Git下载指定分支命令为
+4. **使用Git下载指定分支命令为**
 ```
-git clone -b special branch name git@git.XXX.XXX.git
+git clone -b [special branch name] git@git.XXX.XXX.git
 ```
 
 ### 4. git更换.gitignore文件
@@ -51,7 +51,7 @@ git clone -b special branch name git@git.XXX.XXX.git
 git rm -r --cached .                //将仓库中的index递归删除  
 git add .                           //重新添加仓库索引
 git commit -m 'update git.ignore'   //提交
-``` 
+```
 ### 5. git回滚操作
 1. 方式一
 ```
@@ -65,4 +65,4 @@ git reset --hard origin/develop
 ```
 git branch --set-upstream-to=origin/<branch> <branch>
 本地关联远程分支，其中origin/<branch>是你本地分支对应的远程分支；<branch>是你当前的本地分支
-``` 
+```
