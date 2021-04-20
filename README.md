@@ -69,23 +69,23 @@ Remote：远程仓库
 
 ### 创建和添加
 
-创建新项目gittest
-创建新文件test.txt
-git add <file>
-git status显示有变更的文件
-git restore <file> 撤回文件修改内容
-git commit –m “注释”
-修改内容-> 执行git diff工作区和本地仓库的差异
-git log显示当前分支的版本历史
+创建新项目gittest<br/>
+创建新文件test.txt<br/>
+git add <file><br/>
+git status显示有变更的文件<br/>
+git restore <file> **撤回文件修改内容**<br/>
+git commit –m “注释”<br/>
+修改内容-> 执行git diff工作区和本地仓库的差异<br/>
+git log显示当前分支的版本历史<br/>
 
 ### 版本回退
 
-git reset  --hard HEAD^ 当前版本回退到上一个版本
-git reset  --hard HEAD^ ^ 当前版本回退到上上一个版本
-git reset  --hard HEAD~100 回退到前100个版本
-恢复已经删除的版本
-git reflog 展示所有的提交记录
-git reset --hard <版本号> 回退到指定版本
+git reset  --hard HEAD^ 当前版本回退到上一个版本<br/>
+git reset  --hard HEAD^ ^ 当前版本回退到上上一个版本<br/>
+git reset  --hard HEAD~100 回退到前100个版本<br/>
+恢复已经删除的版本<br/>
+git reflog 展示所有的提交记录<br/>
+git reset --hard <版本号> 回退到指定版本<br/>
 
 ### 推送至远程分支
 
@@ -93,34 +93,34 @@ git push origin master 将本地master分支推送到远程master分支，相当
 
 ### 创建与合并分支
 
-git checkout -b dev = git branch dev + git checkout dev 创建并切换分支
-git branch 不带参数，会列出所有本地的分支；带参数表示创建分支
-git branch –d name 删除本地分支(-D表示强制删除）
-git branch –r 不带参数，会列出所有远程的分支
-git branch --set-upstream-to=origin/<branch本地> 本地和远程分支关联
-git push origin –delete <branch> 删除远程分支
+git checkout -b dev = git branch dev + git checkout dev 创建并切换分支<br/>
+git branch 不带参数，会列出所有本地的分支；带参数表示创建分支<br/>
+git branch –d name 删除本地分支(-D表示强制删除）<br/>
+git branch –r 不带参数，会列出所有远程的分支<br/>
+git branch --set-upstream-to=origin/<branch本地> 本地和远程分支关联<br/>
+git push origin –delete <branch> 删除远程分支<br/>
 
 ### 合并分支
 
-git merge release用于合并指定分支到当前分支上
-注：Fast-forward表示的合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。在这种模式下，删除分支后，会丢掉分支日志信息。可以使用带参数 --no-ff来禁用”Fast forward”模式。
-git merge --no-ff  -m “注释”dev 
+git merge release用于合并指定分支到当前分支上<br/>
+注：Fast-forward表示的合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。在这种模式下，删除分支后，会丢掉分支日志信息。可以使用带参数 --no-ff来禁用”Fast forward”模式。<br/>
+git merge --no-ff  -m “注释”dev <br/>
 
 ### 解决冲突
 
-git checkout release 切换release分支
-vim test.txt 修改某条内容
-git commit test.txt -m “release修改某条内容”
-git checkout master 切换master分支
-vim test.txt 修改某条同release内容
-git commit test.txt -m “master修改某条内容”
-git merge release 显示冲突
-git status 显示冲突提示
+git checkout release 切换release分支<br/>
+vim test.txt 修改某条内容<br/>
+git commit test.txt -m “release修改某条内容”<br/>
+git checkout master 切换master分支<br/>
+vim test.txt 修改某条同release内容<br/>
+git commit test.txt -m “master修改某条内容”<br/>
+git merge release 显示冲突<br/>
+git status 显示冲突提示<br/>
 
 Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，其中>>>>release 是指release上修改的内容
-vim test.txt 修改内容
-git add test.txt
-git commit -a -m “fix conflict”
+vim test.txt 修改内容<br/>
+git add test.txt<br/>
+git commit -a -m “fix conflict”<br/>
 
 ### 暂储stash功能
 
@@ -128,16 +128,16 @@ git commit -a -m “fix conflict”
 
 #### 一、产生场景
 
-git checkout release
-vim test.txt 修改test.txt内容
-git checkout develop 此时会提示Aborting
+git checkout release<br/>
+vim test.txt 修改test.txt内容<br/>
+git checkout develop 此时会提示Aborting<br/>
 
 #### 二、解决方式
 
 Please commit your changes or stash them before you switch branches
-git stash
-git status 查看当前状态
-Git stash list 查看所有暂储列表
+git stash<br/>
+git status 查看当前状态<br/>
+Git stash list 查看所有暂储列表<br/>
 
 #### 三、还原暂储
 
@@ -146,13 +146,13 @@ git stash apply恢复，恢复后stash内容并不删除，你需要使用命令
 
 ### Git Tag功能
 
-创建Git Tag并推送远程服务器
+创建Git Tag并推送远程服务器<br/>
 
-git tag -a V1.0.0 –m“注释” 							//创建TAG
-git push origin V1.0.0               					//推送到远程服务器
-git push origin --tag               	   				//提交所有tag至服务器
-git tag -d V1.0.0                             				//删除本地标签
-git push origin --delete tag <tagname>    //删除远程标签
+git tag -a V1.0.0 –m“注释” 							//创建TAG<br/>
+git push origin V1.0.0               					//推送到远程服务器<br/>
+git push origin --tag               	   				//提交所有tag至服务器<br/>
+git tag -d V1.0.0                             				//删除本地标签<br/>
+git push origin --delete tag <tagname>    //删除远程标签<br/>
 
 
 
@@ -160,52 +160,52 @@ git push origin --delete tag <tagname>    //删除远程标签
 
 HEAD，它始终指向当前所处分支的最新的提交点。你所处的分支变化了，或者产生了新的提交点，HEAD就会跟着改变
 
-![3985563-623d3cefdcb95045](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-623d3cefdcb95045.png?raw=true) 
+![3985563-623d3cefdcb95045](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-623d3cefdcb95045.png?raw=true)
 
 
 
 ## Add的理解
 
-add相关命令很简单，主要实现将工作区修改的内容提交到暂存区，交由git管理。
-git add .添加当前目录的所有文件到暂存区
-git add 添加指定目录到暂存区，包括子目录
-git add 添加指定文件到暂存区
+add相关命令很简单，主要实现将工作区修改的内容提交到暂存区，交由git管理。<br/>
+git add .添加当前目录的所有文件到暂存区<br/>
+git add 添加指定目录到暂存区，包括子目录<br/>
+git add 添加指定文件到暂存区<br/>
 
-![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true) 
+![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true)
 
 
 
 ## Commit的理解
 
-commit相关命令也很简单，主要实现将暂存区的内容提交到本地仓库，并使得当前分支的HEAD向后移动一个提交点。
-git commit -m 提交暂存区到本地仓库,message代表说明信息
-git commit --amend -m 使用一次新的commit，替代上一次提交
+commit相关命令也很简单，主要实现将暂存区的内容提交到本地仓库，并使得当前分支的HEAD向后移动一个提交点。<br/>
+git commit -m 提交暂存区到本地仓库,message代表说明信息<br/>
+git commit --amend -m 使用一次新的commit，替代上一次提交<br/>
 
-![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true) 
+![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true)
 
 
 
 ## Push的理解
 
-上传本地仓库分支到远程仓库分支，实现同步。
-git push 上传本地指定分支到远程仓库
-git push --force强行推送当前分支到远程仓库，即使有冲突
-git push --all推送所有分支到远程仓库
+上传本地仓库分支到远程仓库分支，实现同步。<br/>
+git push 上传本地指定分支到远程仓库<br/>
+git push --force强行推送当前分支到远程仓库，即使有冲突<br/>
+git push --all推送所有分支到远程仓库<br/>
 
 
 
 ## Branch的理解
 
-关于分支，大概有展示分支，切换分支，创建分支，删除分支这四种操作。
-git branch列出所有本地分支
-git branch -r列出所有远程分支
-git branch -a列出所有本地分支和远程分支
-git branch 新建一个分支，但依然停留在当前分支
-git checkout -b 新建一个分支，并切换到该分支
-git checkout 切换到指定分支，并更新工作区
-git branch -d 删除分支
-git push origin --delete 删除远程分支
-关于分支的操作虽然比较多，但都比较简单好记
+关于分支，大概有展示分支，切换分支，创建分支，删除分支这四种操作。<br/>
+git branch列出所有本地分支<br/>
+git branch -r列出所有远程分支<br/>
+git branch -a列出所有本地分支和远程分支<br/>
+git branch 新建一个分支，但依然停留在当前分支<br/>
+git checkout -b 新建一个分支，并切换到该分支<br/>
+git checkout 切换到指定分支，并更新工作区<br/>
+git branch -d 删除分支<br/>
+git push origin --delete 删除远程分支<br/>
+关于分支的操作虽然比较多，但都比较简单好记<br/>
 
 ![3985563-04bac8d079111a9f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-04bac8d079111a9f.png?raw=true)
 
@@ -213,9 +213,9 @@ git push origin --delete 删除远程分支
 
 ## Merge的理解
 
-merge命令把不同的分支合并起来。在实际开放中，我们可能从master分支中切出一个分支，然后进行开发完成需求，中间经过R3,R4,R5的commit记录，最后开发完成需要合入master中，这便用到了merge。
-git merge 合并指定分支到当前分支
-注：如果在merge之后，出现conflict，主要是因为两个用户修改了同一文件的同一块区域。需要针对冲突情况，手动解除冲突。
+merge命令把不同的分支合并起来。在实际开放中，我们可能从master分支中切出一个分支，然后进行开发完成需求，中间经过R3,R4,R5的commit记录，最后开发完成需要合入master中，这便用到了merge。<br/>
+git merge 合并指定分支到当前分支<br/>
+注：如果在merge之后，出现conflict，主要是因为两个用户修改了同一文件的同一块区域。需要针对冲突情况，手动解除冲突。<br/>
 
 ![3985563-29417c3862d0599c](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-29417c3862d0599c.png?raw=true)
 
@@ -223,11 +223,11 @@ git merge 合并指定分支到当前分支
 
 ## Rebase的理解
 
-rebase又称为衍合，是合并的另外一种选择。
-在开始阶段，我们处于new分支上，执行git rebase dev，那么new分支上新的commit都在dev分支上重演一遍，最后checkout切换回到new分支。这一点与merge是一样的，合并前后所处的分支并没有改变。
-git rebase dev，通俗的解释就是new分支想站在dev的肩膀上继续下去。
-rebase操作不会生成新的节点，是将两个分支融合成一个线性的提交。
-rebase也需要手动解决冲突。
+rebase又称为衍合，是合并的另外一种选择。<br/>
+在开始阶段，我们处于new分支上，执行git rebase dev，那么new分支上新的commit都在dev分支上重演一遍，最后checkout切换回到new分支。这一点与merge是一样的，合并前后所处的分支并没有改变。<br/>
+git rebase dev，通俗的解释就是new分支想站在dev的肩膀上继续下去。<br/>
+rebase操作不会生成新的节点，是将两个分支融合成一个线性的提交。<br/>
+rebase也需要手动解决冲突。<br/>
 
 ![3985563-8d4e5fc624c0a23b](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-8d4e5fc624c0a23b.png?raw=true)
 
@@ -235,29 +235,29 @@ rebase也需要手动解决冲突。
 
 ## Merge和Rebase的比较
 
-1.如果你想要一个干净的，没有merge commit的线性历史树，那么你应该选择git rebase
-2.如果你想保留完整的历史记录，并且想要避免重写commit history的风险，你应该选择使用git merge
+1.如果你想要一个干净的，没有merge commit的线性历史树，那么你应该选择git rebase<br/>
+2.如果你想保留完整的历史记录，并且想要避免重写commit history的风险，你应该选择使用git merge<br/>
 
 
 
 ## Reset的理解
 
-reset命令把当前分支指向另一个位置，并且相应的变动工作区和暂存区。
-git reset —soft 只改变提交点，暂存区和工作目录的内容都不改变
-git reset —mixed 改变提交点，同时改变暂存区的内容
-git reset —hard 暂存区、工作区的内容都会被修改到与提交点完全一致的状态
+reset命令把当前分支指向另一个位置，并且相应的变动工作区和暂存区。<br/>
+git reset —soft 只改变提交点，暂存区和工作目录的内容都不改变<br/>
+git reset —mixed 改变提交点，同时改变暂存区的内容<br/>
+git reset —hard 暂存区、工作区的内容都会被修改到与提交点完全一致的状态<br/>
 
 ![3985563-2d41240c43bc3f2e](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-2d41240c43bc3f2e.png?raw=true)
 
 ## Revert的理解
 
-git revert用一个新提交来消除一个历史提交所做的任何修改。
+git revert用一个新提交来消除一个历史提交所做的任何修改。<br/>
 
 ![3985563-02aab40cb9b6efb1](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-02aab40cb9b6efb1.jpeg?raw=true)
 
 ## Revert与Reset的区别
 
-在回滚这一操作上看，效果差不多。git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit。
+在回滚这一操作上看，效果差不多。git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit。<br/>
 
 ![3985563-93d402b6ebda56f8](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-93d402b6ebda56f8.jpeg?raw=true)
 
@@ -265,15 +265,15 @@ git revert用一个新提交来消除一个历史提交所做的任何修改。
 
 ### 一、创建gitignore文件
 
-在 Git工作区的根目录创建一个特殊的.gitignore文件。
-在.gitignore文件中，添加需要忽略的文件。
+在 Git工作区的根目录创建一个特殊的.gitignore文件。<br/>
+在.gitignore文件中，添加需要忽略的文件。<br/>
 
 ### 二、更新gitignore文件
 
-git rm -r --cached .          	//将仓库中的index递归删除  
-git add .                           //重新添加仓库索引
-git commit -m “update git.ignore” //提交
-git branch --set-upstream-to=origin/<branch> <branch> //重现将本地仓库和远程仓库关联
+git rm -r --cached .          	//将仓库中的index递归删除  <br/>
+git add .                           //重新添加仓库索引<br/>
+git commit -m “update git.ignore” //提交<br/>
+git branch --set-upstream-to=origin/<branch> <branch> //重现将本地仓库和远程仓库关联<br/>
 
 
 
