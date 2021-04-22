@@ -196,7 +196,7 @@ git push origin --delete tag <tagname>    //删除远程标签
 
 HEAD，它始终指向当前所处分支的最新的提交点。你所处的分支变化了，或者产生了新的提交点，HEAD就会跟着改变
 
-![3985563-623d3cefdcb95045](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-623d3cefdcb95045.png?raw=true)
+![3985563-623d3cefdcb95045](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-623d3cefdcb95045.png?raw=true) 
 
 
 
@@ -210,7 +210,7 @@ git add 添加指定目录到暂存区，包括子目录
 
 git add 添加指定文件到暂存区
 
-![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true)
+![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true) 
 
 
 
@@ -222,7 +222,7 @@ git commit -m 提交暂存区到本地仓库,message代表说明信息
 
 git commit --amend -m 使用一次新的commit，替代上一次提交
 
-![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true)
+![3985563-a5f92bd6f800959f](https://github.com/zhijunhong/git_opration/blob/master/art/3985563-a5f92bd6f800959f.png?raw=true) 
 
 
 
@@ -330,7 +330,7 @@ git revert用一个新提交来消除一个历史提交所做的任何修改。
 
 ### 2.更新gitignore文件
 
-git rm -r --cached .          	//将仓库中的index递归删除
+git rm -r --cached .          	//将仓库中的index递归删除  
 
 git add .                           //重新添加仓库索引
 
@@ -341,3 +341,5 @@ git branch --set-upstream-to=origin/<branch> <branch> //重现将本地仓库和
 ## 常用Git建立分支结构
 
 ![202104201](https://github.com/zhijunhong/git_opration/blob/master/art/202104201.png?raw=true)
+
+**最后，如果此篇博文对你有所帮助，别忘了点个赞哟~**
